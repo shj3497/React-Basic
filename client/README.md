@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+## `BABEL`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### JavaScript transcompiler
 
-## Available Scripts
+convert ECMAScript 2015+ -> older version  
+2015년 이상 버전을 이전 버전으로 변환해준다.
+TypeScript나 JSX와 같은 BanilaJavaScript가 아닌 것들을 JavaScript로 변환해준다.
 
-In the project directory, you can run:
+<br/>
 
-### `yarn start`
+## `Webpack`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Bundling the code, JavaScript module bundler
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+우리가 작성하는 이것저것 소스코드나 이미지들을 한번에 묶어서 번들단위로 사용자에게 제공할 수 있도록 도와준다.
 
-### `yarn test`
+<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## `ESLint`
 
-### `yarn build`
+### checking your code
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+우리의 코드에 잘못된 점이 있다면 경고사인을 보내준다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `Jest`
 
-### `yarn eject`
+### delightful JavaScript testing framework
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+JavaScript 코드를 작성할 때 유닛 테스트를 할 수 있게 도와주는 테스팅 프레임워크
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## `PostCSS`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### expandable CSS libraries tool for transforming CSS with JavaScript
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CSS 전처리기 중 하나
