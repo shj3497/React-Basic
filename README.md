@@ -1,2 +1,5 @@
 # React-Basic
-React JS 
+
+React JS
+
+- npm install yarn --global
