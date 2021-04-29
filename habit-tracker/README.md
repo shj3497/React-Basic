@@ -1,3 +1,10 @@
+## 폴더 설명
+
+public 폴더는 정적인 자료들을 담는곳
+src 폴더는 동적으로 움직이는 자료들
+
+<br/>
+
 ## `BABEL`
 
 ### JavaScript transcompiler
