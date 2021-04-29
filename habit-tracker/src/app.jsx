@@ -1,8 +1,13 @@
-import './App.css';
+import React from 'react';
+import './app.css';
+import Habit from './components/habit';
+import Test from './components/test'
 
-function App() {
+
+function App() {  
   return (
-    <h1>Hello</h1>
+    <Habit></Habit>
+    
   );
 }
 
