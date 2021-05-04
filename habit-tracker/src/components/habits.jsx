@@ -6,46 +6,51 @@ import Habit from './habit'
 // 
 
 export default class Habits extends Component {
-  state = {
-    habits: [
-      {id:1, name: 'Reading', count: 0},
-      {id:2, name: 'Running', count: 0},
-      {id:3, name: 'Coding', count: 0}
-    ],
-  };
+  // state = {
+  //   habits: [
+  //     {id:1, name: 'Reading', count: 0},
+  //     {id:2, name: 'Running', count: 0},
+  //     {id:3, name: 'Coding', count: 0}
+  //   ],
+  // };
 
   handleIncrement = (habit) => {
-    console.log(`handleIncrement : ${habit.name}`);
-    const habits = [...this.state.habits];
+    // console.log(`handleIncrement : ${habit.name}`);
+    // const habits = [...this.state.habits];
     // console.log(habits); ...의 의미는 그대로 복사해온다라는 뜻
-    const index = habits.indexOf(habit);
-    habits[index].count++;
-    this.setState({
-      habits: habits
-    });
+    // const index = habits.indexOf(habit);
+    // habits[index].count++;
+    // this.setState({
+    //   habits: habits
+    // });
+
+    this.props.onIncrement(habit);
+
   }
 
   handleDecrement = (habit) => {
-    console.log(`handleDecrement : ${habit.name}`)
-    const habits = [...this.state.habits];
-    const index = habits.indexOf(habit);
-    habits[index].count--;
-    if(habits[index].count < 0){
-      habits[index].count=0;
-    }
-    this.setState({
-      habits:habits
-    })
+    // console.log(`handleDecrement : ${habit.name}`)
+    // const habits = [...this.state.habits];
+    // const index = habits.indexOf(habit);
+    // habits[index].count--;
+    // if(habits[index].count < 0){
+    //   habits[index].count=0;
+    // }
+    // this.setState({
+    //   habits:habits
+    // })
+    this.props.onDecrement(habit);
   }
 
   handleDelete = (habit) => {
-    console.log(`handleDelete : ${habit.name}`)
-    const habits = [...this.state.habits]
-    const index = habits.indexOf(habit);
-    habits.splice(index, 1);
-    this.setState({
-      habits:habits
-    })
+    // console.log(`handleDelete : ${habit.name}`)
+    // const habits = [...this.state.habits]
+    // const index = habits.indexOf(habit);
+    // habits.splice(index, 1);
+    // this.setState({
+    //   habits:habits
+    // })
+    this.props.onDelete(habit);
   }
 
 
@@ -53,7 +58,8 @@ export default class Habits extends Component {
     return (
       <ul>
         {
-          this.state.habits.map(habit => (
+          // app.js에서 habits를 전달해 줬으니 배열로 담겨져 있다.
+          this.props.habits.map(habit => (
             <Habit 
               key={habit.id} 
               habit={habit} 
