@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
-export default class HabitAddForm extends Component {
+export default class HabitAddForm extends PureComponent {
 
   // Ref
   // DOM에서는 document.querySeletor로 원하는 요소를 지정해 줬다면
@@ -13,11 +13,16 @@ export default class HabitAddForm extends Component {
     event.preventDefault();
     // console.log(this.inputRef.current.value);
     const name = this.inputRef.current.value;
-    name && this.props.onAdd(name);
+    // name && this.props.onAdd(name);
+    
+    if(name !== ''){
+      this.props.onAdd(name);
+    }
     this.inputRef.current.value = '';
   }
 
   render() {
+    console.log('Habit')
     return (
       <form className="add=form" onSubmit={this.onSubmit}>
         <input 

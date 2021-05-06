@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 // Habit 컴포넌트의 부모 컴포넌트는 Habits이다.
 // 부모컴포넌트의 데이터 호출시에는 props를 활용하고, 자신의 데이터를 호출할 때는 state를 사용한다.
 
-class Habit extends Component {
+class Habit extends PureComponent {
 
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit)
@@ -18,6 +18,7 @@ class Habit extends Component {
   }
 
   render() {
+    console.log('Habit')
     // console.log(this.props.habit);
     // const habitName = this.props.habit.name;
     const {name, count} = this.props.habit;

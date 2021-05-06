@@ -58,8 +58,9 @@ export default class Habits extends Component {
   }
 
   render() {
+    console.log('Habits')
     return (
-      <>
+      <div>
         <HabitAddForm onAdd={this.handleAdd} />
         <ul>
           {
@@ -67,7 +68,7 @@ export default class Habits extends Component {
             this.props.habits.map(habit => (
               <Habit 
                 key={habit.id} 
-                habit={habit} 
+                habit={habit}
                 onIncrement={this.handleIncrement}
                 onDecrement={this.handleDecrement}
                 onDelete={this.handleDelete} 
@@ -77,7 +78,7 @@ export default class Habits extends Component {
           }
         </ul>
         <button className="habits-reset" onClick={this.props.onReset}>Reset All</button>
-      </>
+      </div>
     )
   }
 }
