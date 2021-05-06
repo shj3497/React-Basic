@@ -47,6 +47,15 @@ class App extends Component {
     })
   }
 
+  handleAdd = (name) => {
+    const habits = [...this.state.habits, {id: Date.now(), name:name, count:0}]
+    // 기존에 있던 배열 ...this.state.habits, (추가할것) {}
+    this.setState({
+      habits:habits
+    })
+
+  }
+  
   render() {
     return (
       <>
@@ -55,7 +64,8 @@ class App extends Component {
           habits={this.state.habits}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
-          onDelete={this.handleDelete} 
+          onDelete={this.handleDelete}
+          onAdd={this.handleAdd}
         />
       </>
     );

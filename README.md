@@ -104,3 +104,15 @@ function App(){
   ```
 
 - 그래서 LikeButton안에서 `this.props.title`, `this.props.onClick` 으로 각각 전달된 'Like'와 'this.handleClick' 함수에 접근 할 수 있다.
+
+<br />
+
+## Ref
+
+DOM에서는 원하는 요소에 접근시에 document.querySelector를 사용하여 접근했다.  
+React에서는 원하는 요소에 접근하려면 inputRef = React.createRef()로 객체를 생성해주고, 원하는 요소에 속성으로 ref={this.inputRef}를 사용하면 된다.
+
+```javaScript
+inputRef = React.createRef();
+<input ref={inputRef} />
+```

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Habit from './habit'
-
+import HabitAddForm from './habitAddForm'
 // Habits라는 컴포넌트 생성 후 , 기존에 있던 Habit이라는 컴포넌트를 자식 컴포넌트로 만들었다.
 // 자식 컴포넌트에서 부모컴포넌트에 접근 할 시에는 props 로 호출한다.
 // 
@@ -53,24 +53,30 @@ export default class Habits extends Component {
     this.props.onDelete(habit);
   }
 
+  handleAdd = (name) => {
+    this.props.onAdd(name);
+  }
 
   render() {
     return (
-      <ul>
-        {
-          // app.js에서 habits를 전달해 줬으니 배열로 담겨져 있다.
-          this.props.habits.map(habit => (
-            <Habit 
-              key={habit.id} 
-              habit={habit} 
-              onIncrement={this.handleIncrement}
-              onDecrement={this.handleDecrement}
-              onDelete={this.handleDelete} 
-            />
+      <>
+        <HabitAddForm onAdd={this.handleAdd} />
+        <ul>
+          {
+            // app.js에서 habits를 전달해 줬으니 배열로 담겨져 있다.
+            this.props.habits.map(habit => (
+              <Habit 
+                key={habit.id} 
+                habit={habit} 
+                onIncrement={this.handleIncrement}
+                onDecrement={this.handleDecrement}
+                onDelete={this.handleDelete} 
+              />
+              )
             )
-          )
-        }
-      </ul>
+          }
+        </ul>
+      </>
     )
   }
 }
