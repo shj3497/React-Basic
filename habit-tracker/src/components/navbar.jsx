@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 
 export default class Navbar extends PureComponent {
   render() {
-    console.log("Navbar")
+    // console.log("Navbar")
     return (
       <nav className="navbar">
         <i className="navbar-logo fas fa-leaf"></i>

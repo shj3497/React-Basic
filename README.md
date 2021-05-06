@@ -10,7 +10,8 @@
 ## Class 형식의 React
 
 - React.Component
-- React.PureComponent
+- React.PureComponent <-> memo
+- 단축키 : rcc
 
 <br/>
 
@@ -19,6 +20,7 @@
 - function
 - memo(function)(Higher Order Component)(HOC)
 - React Hook
+- 단축키 : rsi
 
 <br/>
 
@@ -123,7 +125,7 @@ inputRef = React.createRef();
 
 [React Doc](https://reactjs.org/docs/react-api.html)
 
-### React.PureComponent
+### PureComponent
 
 ```
 React.PureComponent는 React.Component와 비슷합니다. React.Component는 shouldComponentUpdate()를 구현하지 않지만, React.PureComponent는 props와 state를 이용한 얕은 비교를 구현한다는 차이점만이 존재합니다.
@@ -136,3 +138,12 @@ React.PureComponent의 shouldComponentUpdate()는 컴포넌트에 대하여 얕�
 
 더 나아가 React.PureComponent의 shouldComponentUpdate()는 컴포넌트의 하위 트리에 대한 props 갱신 작업을 수행하지 않습니다. 자식 컴포넌트들이 “순수”한지 꼭 확인하기 바랍니다.
 ```
+
+<br/>
+
+## React Hook
+
+[예시](./habit-tracker/src/components/simpleHabit.jsx)
+
+1. React.createRef() <-> useRef
+2. state <-> useState

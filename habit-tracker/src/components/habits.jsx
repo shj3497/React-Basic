@@ -58,7 +58,7 @@ export default class Habits extends Component {
   }
 
   render() {
-    console.log('Habits')
+    // console.log('Habits')
     return (
       <div>
         <HabitAddForm onAdd={this.handleAdd} />
